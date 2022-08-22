@@ -3508,7 +3508,7 @@ template <typename T>
   class condition_base : public list_elem<condition_base<Sig>>
   {
   public:
-    condition_base(
+    explicit condition_base(
       char const *n)
     noexcept
       : id(n)
