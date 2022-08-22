@@ -1927,6 +1927,7 @@ template <typename T>
 
     char const*
     sequence_name()
+    const
     noexcept
     {
       return seq_name;
