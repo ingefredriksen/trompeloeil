@@ -3343,7 +3343,7 @@ template <typename T>
         try {
           throw;
         }
-        catch (std::exception& e)
+        catch (std::exception const& e)
         {
           os << "threw exception: what() = " << e.what() << '\n';
         }
