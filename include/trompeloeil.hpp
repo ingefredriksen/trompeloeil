@@ -3744,7 +3744,7 @@ template <typename T>
     {
       using R = decltype(default_return<return_of_t<signature>>());
 
-      throw_handler_t(H&& h_)
+      explicit throw_handler_t(H&& h_)
         : h(std::forward<H>(h_))
       {}
 
