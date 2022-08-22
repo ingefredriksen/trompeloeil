@@ -2573,6 +2573,7 @@ template <typename T>
     noexcept
     = default;
 
+    explicit
     null_on_move(
       T* p_)
     noexcept
