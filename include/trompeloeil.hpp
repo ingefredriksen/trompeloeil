@@ -1713,6 +1713,7 @@ template <typename T>
     }
 
   private:
+    explicit
     iterator(
       list_elem<T> const *t)
     noexcept
@@ -1749,7 +1750,7 @@ template <typename T>
   noexcept
   -> iterator
   {
-    return {next};
+    return iterator{next};
   }
 
   template <typename T, typename Disposer>
@@ -1759,7 +1760,7 @@ template <typename T>
   noexcept
   -> iterator
   {
-    return {this};
+    return iterator{this};
   }
 
   template <typename T, typename Disposer>
@@ -1775,7 +1776,7 @@ template <typename T>
     next->prev = t;
     next = t;
     invariant_check();
-    return {t};
+    return iterator{t};
   }
 
   template <typename T, typename Disposer>
@@ -1791,7 +1792,7 @@ template <typename T>
     prev->next = t;
     prev = t;
     invariant_check();
-    return {t};
+    return iterator{t};
   }
 
   class sequence_matcher;
