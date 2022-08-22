@@ -1226,7 +1226,6 @@ template <typename T>
 #endif
 
   template <typename T, typename = decltype(std::declval<T const&>() == nullptr)>
-  inline
   constexpr
   auto
   is_null_redirect(
@@ -1238,7 +1237,6 @@ template <typename T>
   }
 
   template <typename T>
-  inline
   constexpr
   auto
   is_null(
@@ -1252,7 +1250,6 @@ template <typename T>
   }
 
   template <typename T, typename V>
-  inline
   constexpr
   bool
   is_null(
@@ -1459,7 +1456,6 @@ template <typename T>
     os << "nullptr";
   }
 
-  inline
   constexpr
   auto
   param_compare_operator(
