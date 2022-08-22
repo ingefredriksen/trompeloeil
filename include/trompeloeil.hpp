@@ -1973,7 +1973,7 @@ template <typename T>
   noexcept
   {
     unsigned sequence_cost = 0U;
-    for (auto& e : matchers)
+    for (auto const& e : matchers)
     {
       if (&e == m) return sequence_cost;
       if (!e.is_satisfied())
