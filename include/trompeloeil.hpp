@@ -1852,11 +1852,10 @@ template <typename T>
   class sequence
   {
   public:
-    sequence() : obj(new sequence_type) {}
     sequence_type& operator*() { return *obj; }
     bool is_completed() const { return obj->is_completed(); }
   private:
-    std::unique_ptr<sequence_type> obj;
+    std::unique_ptr<sequence_type> obj{new sequence_type};
   };
 
   struct sequence_handler_base;
