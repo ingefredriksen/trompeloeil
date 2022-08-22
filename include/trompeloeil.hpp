@@ -4210,7 +4210,7 @@ template <typename T>
     auto
     make_expectation(
       std::true_type,
-      call_modifier<M, Tag, Info>&& m)
+      call_modifier<M, Tag, Info> const& m)
     const
     noexcept
     TROMPELOEIL_TRAILING_RETURN_TYPE(std::unique_ptr<expectation>)
