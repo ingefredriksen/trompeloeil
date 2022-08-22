@@ -4177,7 +4177,6 @@ template <typename T>
   }
 
   template <int N>
-  inline
   constexpr
   illegal_argument const
   arg(
