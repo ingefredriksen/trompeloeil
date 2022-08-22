@@ -955,6 +955,7 @@ namespace trompeloeil
   class stream_tracer : public tracer
   {
   public:
+    explicit
     stream_tracer(
       std::ostream& stream_)
       : stream(stream_) {}
