@@ -2020,7 +2020,7 @@ template <typename T>
          << "\" has no more pending expectations\n";
       send_report<specialized>(s, loc, os.str());
     }
-    for (auto& m : matchers)
+    for (auto const& m : matchers)
     {
       std::ostringstream os;
       os << "Sequence mismatch for sequence \"" << seq_name
