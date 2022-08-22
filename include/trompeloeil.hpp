@@ -1031,7 +1031,6 @@ namespace trompeloeil
     }
 
   template <typename ... T>
-  inline
   constexpr
   bool
   ignore(
