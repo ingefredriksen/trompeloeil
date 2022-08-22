@@ -3487,7 +3487,8 @@ template <typename T>
   {
   public:
     template <typename U>
-    explicit return_handler_t(
+    explicit
+    return_handler_t(
       U&& u)
     : func(std::forward<U>(u))
     {}
@@ -3508,7 +3509,8 @@ template <typename T>
   class condition_base : public list_elem<condition_base<Sig>>
   {
   public:
-    explicit condition_base(
+    explicit
+    condition_base(
       char const *n)
     noexcept
       : id(n)
