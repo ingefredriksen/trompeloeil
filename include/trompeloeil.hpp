@@ -1082,7 +1082,7 @@ namespace trompeloeil
   {
     template <typename T
 #if TROMPELOEIL_GCC && TROMPELOEIL_GCC_VERSION >= 50000
-              ,detail::enable_if_t<!std::is_convertible<wildcard&, T>{}>* = nullptr
+              ,detail::enable_if_t<!std::is_convertible<wildcard const&, T>{}>* = nullptr
 #endif
               >
     operator T&&()
@@ -1090,7 +1090,7 @@ namespace trompeloeil
 
     template <typename T
 #if TROMPELOEIL_GCC && TROMPELOEIL_GCC_VERSION >= 50000
-              ,detail::enable_if_t<!std::is_convertible<wildcard&, T>{}>* = nullptr
+              ,detail::enable_if_t<!std::is_convertible<wildcard const&, T>{}>* = nullptr
 #endif
               >
     operator T&()
@@ -1108,7 +1108,7 @@ namespace trompeloeil
     }
   };
 
-  TROMPELOEIL_INLINE_VAR wildcard _{};
+  TROMPELOEIL_INLINE_VAR constexpr wildcard _{};
 
 template <typename T>
   using matcher_access = decltype(static_cast<matcher*>(std::declval<typename std::add_pointer<T>::type>()));
