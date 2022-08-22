@@ -3487,7 +3487,7 @@ template <typename T>
   {
   public:
     template <typename U>
-    return_handler_t(
+    explicit return_handler_t(
       U&& u)
     : func(std::forward<U>(u))
     {}
