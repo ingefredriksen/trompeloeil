@@ -1656,11 +1656,6 @@ template <typename T>
     using pointer = T*;
     using reference = T&;
   public:
-    iterator()
-    noexcept
-      : p{nullptr}
-    {}
-
     friend
     bool
     operator==(
@@ -1720,7 +1715,7 @@ template <typename T>
     : p{const_cast<list_elem<T>*>(t)}
     {}
 
-    list_elem<T>* p;
+    list_elem<T>* p = nullptr;
   };
 
   template <typename T, typename Disposer>
