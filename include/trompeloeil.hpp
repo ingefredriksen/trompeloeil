@@ -3454,7 +3454,7 @@ template <typename T>
   template <typename Ret, typename F, typename P, typename = detail::enable_if_t<std::is_void<Ret>::value>>
   void
   trace_return(
-    trace_agent&,
+    trace_agent const&,
     F& func,
     P& params)
   {
