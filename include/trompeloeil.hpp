@@ -3578,6 +3578,7 @@ template <typename T>
   struct side_effect : public side_effect_base<Sig>
   {
     template <typename A>
+    explicit
     side_effect(
       A&& a_)
     : a(std::forward<A>(a_))
