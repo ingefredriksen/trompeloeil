@@ -1166,6 +1166,7 @@ template <typename T>
 
   struct stream_sentry
   {
+    explicit
     stream_sentry(
       std::ostream& os_)
       : os(os_)
