@@ -2589,6 +2589,9 @@ template <typename T>
     noexcept
     {}
 
+    ~null_on_move()
+    = default;
+
     null_on_move&
     operator=(
       const null_on_move&)
