@@ -1264,7 +1264,6 @@ template <typename T>
   }
 
   template <typename T>
-  inline
   constexpr
   bool
   is_null(
@@ -1276,7 +1275,6 @@ template <typename T>
   }
 
   template <typename T>
-  inline
   constexpr
   bool
   is_null(
@@ -1471,7 +1469,6 @@ template <typename T>
     return " == ";
   }
 
-  inline
   constexpr
   auto
   param_compare_operator(
