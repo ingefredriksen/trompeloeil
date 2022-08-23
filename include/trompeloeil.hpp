@@ -1460,7 +1460,7 @@ template <typename T>
   constexpr
   auto
   param_compare_operator(
-    ...)
+    void const*)
   TROMPELOEIL_TRAILING_RETURN_TYPE(const char*)
   {
     return " == ";
