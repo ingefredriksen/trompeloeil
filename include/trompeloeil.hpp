@@ -2539,7 +2539,7 @@ template <typename T>
   inline
   std::string
   param_name_prefix(
-    ...)
+    void const*)
   {
     return "";
   }
