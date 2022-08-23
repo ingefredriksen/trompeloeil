@@ -3151,7 +3151,7 @@ template <typename T>
   param_matches_impl(
     T const& t,
     U const& u,
-    ...)
+    void const*)
   noexcept(noexcept(::trompeloeil::identity<U>(t) == u))
   {
     return ::trompeloeil::identity<U>(t) == u;
